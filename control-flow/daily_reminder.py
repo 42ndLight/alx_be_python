@@ -24,25 +24,25 @@ while True:
 # Create reminder using match-case and if statements
 match priority:
     case "high":
-        reminder = f"'{task}' is a high priority task"
+        reminder = f"Reminder: '{task}' is a HIGH PRIORITY task."
         if time_bound == "yes":
-            reminder += " that requires immediate attention today!"
+            reminder += " Immediate action is required as it is time-sensitive!"
         else:
-            reminder += ". Please complete this as soon as possible."
+            reminder += " Please complete this as soon as possible."
 
     case "medium":
-        reminder = f"'{task}' is a medium priority task"
+        reminder = f"Reminder: '{task}' is a MEDIUM PRIORITY task."
         if time_bound == "yes":
-            reminder += " that requires attention today!"
+            reminder += " It requires attention today."
         else:
-            reminder += ". Try to complete this soon."
+            reminder += " Try to complete it soon."
 
     case "low":
-        reminder = f"'{task}' is a low priority task"
+        reminder = f"Reminder: '{task}' is a LOW PRIORITY task."
         if time_bound == "yes":
-            reminder += ". Please complete it today if possible."
+            reminder += " Completing it today would be ideal."
         else:
-            reminder += ". Consider completing it when you have free time."
+            reminder += " Consider finishing it when you have free time."
 
 # Display the reminder
 print(f"\n{reminder}\n")
