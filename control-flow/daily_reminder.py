@@ -25,19 +25,16 @@ while True:
 if time_bound == "yes":
     match priority:
         case "high":
-            reminder = f"Reminder: '{task}' is a high priority task that requires immediate attention today!"
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
         case "medium":
-            reminder = f"Reminder: '{task}' is a medium priority task that requires attention today."
+            print(f"Reminder: '{task}' is a medium priority task that requires attention today.")
         case "low":
-            reminder = f"Reminder: '{task}' is a low priority task. Please complete it today if possible."
+            print(f"Reminder: '{task}' is a low priority task. Please complete it today if possible.")
 else:
     match priority:
         case "high":
-            reminder = f"Note: '{task}' is a high priority task. Please complete this as soon as possible."
+            print(f"Note: '{task}' is a high priority task. Please complete this as soon as possible.")
         case "medium":
-            reminder = f"Note: '{task}' is a medium priority task. Try to complete it soon."
+            print(f"Note: '{task}' is a medium priority task. Try to complete it soon.")
         case "low":
-            reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
-
-# Display the reminder
-print(f"\n{reminder}\n")
+            print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
