@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A simplified script that creates customized reminders for a single daily task
+A script that creates customized reminders for a single daily task
 based on priority and time sensitivity.
 """
 
@@ -22,27 +22,22 @@ while True:
     print("Invalid input! Please enter 'yes' or 'no'")
 
 # Create reminder using match-case and if statements
-match priority:
-    case "high":
-        reminder = f"Reminder: '{task}' is a HIGH PRIORITY task."
-        if time_bound == "yes":
-            reminder += " Immediate action is required as it is time-sensitive!"
-        else:
-            reminder += " Please complete this as soon as possible."
-
-    case "medium":
-        reminder = f"Reminder: '{task}' is a MEDIUM PRIORITY task."
-        if time_bound == "yes":
-            reminder += " It requires attention today."
-        else:
-            reminder += " Try to complete it soon."
-
-    case "low":
-        reminder = f"Reminder: '{task}' is a LOW PRIORITY task."
-        if time_bound == "yes":
-            reminder += " Completing it today would be ideal."
-        else:
-            reminder += " Consider finishing it when you have free time."
+if time_bound == "yes":
+    match priority:
+        case "high":
+            reminder = f"Reminder: '{task}' is a high priority task that requires immediate attention today!"
+        case "medium":
+            reminder = f"Reminder: '{task}' is a medium priority task that requires attention today."
+        case "low":
+            reminder = f"Reminder: '{task}' is a low priority task. Please complete it today if possible."
+else:
+    match priority:
+        case "high":
+            reminder = f"Note: '{task}' is a high priority task. Please complete this as soon as possible."
+        case "medium":
+            reminder = f"Note: '{task}' is a medium priority task. Try to complete it soon."
+        case "low":
+            reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
 
 # Display the reminder
 print(f"\n{reminder}\n")
