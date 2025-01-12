@@ -1,15 +1,14 @@
-def perform_operation(a: float, b: float, operator: str) -> float:
-    match operator:
+def perform_operation(num1: float, num2: float, operation: str) -> float:
+    match operation:
         case 'add':
-            return a + b
+            return num1 + num2
         case 'subtract':
-            return a - b
+            return num1 - num2
         case 'multiply':
-            return a * b
+            return num1 * num2
         case 'divide':
             if b == 0:
                 raise ValueError("Cannot divide by zero!")
             else:
-                return a / b
+                return num1 / num2
         
-print(perform_operation(5, 3, 'add'))  # Output: 8
