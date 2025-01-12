@@ -7,8 +7,9 @@ def perform_operation(num1: float, num2: float, operation: str) -> float:
         case 'multiply':
             return num1 * num2
         case 'divide':
-            if b == 0:
+            if num2 == 0:
                 raise ValueError("Cannot divide by zero!")
-            else:
-                return num1 / num2
+            return num1 / num2
+        case _:
+            raise ValueError(f"Invalid operation: {operation}. Choose from 'add', 'subtract', 'multiply', 'divide'.")
         
