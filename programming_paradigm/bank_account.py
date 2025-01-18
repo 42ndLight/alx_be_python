@@ -13,6 +13,6 @@ class BankAccount:
         return self.account_balance
     
     def display_balance(self):
-        print(f"Your account balance is: {self.account_balance}")
+        print(f"Current Balance: {self.account_balance}")
 
 
